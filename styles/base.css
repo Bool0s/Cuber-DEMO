@@ -606,5 +606,43 @@ textarea#texts {
 	font-size: 24px;
 }
 
+    /****************/
+   /*              */
+  /* Music Player */
+ /*              */
+/****************/
+
+#recorder {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 45px;	
+	color: rgba( 255, 255, 255, 0.4 );
+	overflow: auto;
+	padding: 20px 20px 20px 20px;
+}
+
+#indicator {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	height: 10px;
+	width: 10px;
+	background-color: #555555;
+	border-radius: 50%;
+	overflow: auto;
+	margin: 20px 20px 23px 70px;
+}
+
+#playback {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 10px;
+	color: rgba( 255, 255, 255, 0.4 );
+	/*overflow: auto;*/
+	padding: 20px 20px 20px 100px
+}
+
 
 
