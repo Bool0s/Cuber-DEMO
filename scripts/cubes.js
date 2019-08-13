@@ -111,7 +111,7 @@ function Cube( preset ){
 
 	//  How long should a Cube.twist() take?
 
-	this.twistDuration = SECOND
+	this.twistDuration = 20
 
 
 	//  If we shuffle, how shall we do it?
@@ -1024,9 +1024,8 @@ setupTasks.push( function(){
 					})
 				}
 
-
+				
 				//@@  COME BACK AND BETTER DOCUMENT WHAT'S HAPPENING HERE!
-
 
 				if( onTwistComplete instanceof Function ){
 
@@ -1039,8 +1038,9 @@ setupTasks.push( function(){
 							$( that ).fadeOut( 500 )
 						
 						}, 50 )
-					})				
+					})
 				}
+				
 				else console.log( '! Received a twist command ('+ command +'), however some of the required Cubelets are currently engaged.' )
 			}
 			else if( erno.verbosity >= 0.8 ) console.log( '! Received an invalid twist command: '+ command +'.' )
@@ -1741,7 +1741,6 @@ setupTasks.push( function(){
 				$( '#cubeIsTweening' ).fadeOut( 100 )
 				if( cube.twistQueue.isReady ){
 
-
 					//  We have zero twists in the queue
 					//  so perhaps we'd like to add some?
 
@@ -1783,6 +1782,11 @@ setupTasks.push( function(){
 						
 						cube.twist( cube.twistQueue.do() )
 						if( cube.twistQueue.future.length > 0 ) $( '#cubeHasTwistsQueued' ).fadeIn( 100 )
+							
+						//Don't mind me just sneaking in some recording code for this music player, not nearly as nice as the rest of this though 
+						if (String(document.getElementById("indicator").style.backgroundColor) == "rgb(255, 0, 0)") {
+							record.saveState();
+						}
 					}
 
 
