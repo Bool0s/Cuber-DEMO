@@ -1025,6 +1025,7 @@ setupTasks.push( function(){
 				}
 
 				
+				
 				//@@  COME BACK AND BETTER DOCUMENT WHAT'S HAPPENING HERE!
 
 				if( onTwistComplete instanceof Function ){
@@ -1044,6 +1045,7 @@ setupTasks.push( function(){
 				else console.log( '! Received a twist command ('+ command +'), however some of the required Cubelets are currently engaged.' )
 			}
 			else if( erno.verbosity >= 0.8 ) console.log( '! Received an invalid twist command: '+ command +'.' )
+				
 		},
 
 
@@ -1739,6 +1741,12 @@ setupTasks.push( function(){
 			if( cube.isReady && !cube.isTweening() ){
 	
 				$( '#cubeIsTweening' ).fadeOut( 100 )
+				
+				//There's probably a better place for this recording code but I can't figure out where else to put it where a twist is recorded AFTER it's executed
+				if ((String(document.getElementById("indicator").style.backgroundColor) == "rgb(255, 0, 0)") && (cube.faces != record.getCurrentCube())) {
+					record.saveState();
+				}
+				
 				if( cube.twistQueue.isReady ){
 
 					//  We have zero twists in the queue
@@ -1772,6 +1780,8 @@ setupTasks.push( function(){
 
 							var task = cube.taskQueue.do()
 							if( task instanceof Function ) task()
+								
+
 						}					 
 					}
 
@@ -1783,10 +1793,8 @@ setupTasks.push( function(){
 						cube.twist( cube.twistQueue.do() )
 						if( cube.twistQueue.future.length > 0 ) $( '#cubeHasTwistsQueued' ).fadeIn( 100 )
 							
-						//Don't mind me just sneaking in some recording code for this music player, not nearly as nice as the rest of this though 
-						if (String(document.getElementById("indicator").style.backgroundColor) == "rgb(255, 0, 0)") {
-							record.saveState();
-						}
+						
+						
 					}
 
 
@@ -1795,11 +1803,10 @@ setupTasks.push( function(){
 			else if( cube.isTweening ){
 
 				$( '#cubeIsTweening' ).fadeIn( 100 )
+				
+				
 			}
 		}// loop: function()
-
-
-
 
 	})
 })
