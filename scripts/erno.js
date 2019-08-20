@@ -260,6 +260,7 @@ var erno = {
 		loop: function(){
 
 			animate()
+			
 		}
 	},
 
@@ -433,6 +434,7 @@ function animate(){
 	}
 	render()
 	//requestAnimationFrame( animate )
+	
 }
 function render(){
 	
@@ -585,6 +587,7 @@ function loop(){
 		erno.stateFrames ++
 		var state = erno.states[ erno.state ]
 		if( state instanceof Function ) state()
+		
 	}
 }
 setInterval( loop, 16 )
