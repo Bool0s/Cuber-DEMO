@@ -1,0 +1,3 @@
+I had to try and plan out how the notes would be mapped on a cube before setting out to code them. I figured these maps might be useful to anyone trying to look into this.
+
+The "Note Map Flow Alt.png" is an attempt at accurately recreating the direction in which notes were played from the video however it ended up being inconsistent so I made my own simpler flow depicted in "Note Map Flow.png"
