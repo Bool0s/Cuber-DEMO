@@ -6,5 +6,6 @@ I tried my best to be as accurate as possible but unfortunately I couldn't get e
 
 There's also some weird sound bugs that I'm not sure how to solve, mainly just that it doesn't seem to sync up correctly but idk how to fix that ¯\_(ツ)_/¯
 
-~How to use~
+**How to use**
+
 Just press record and start twisting the cube to hear the sounds. Press record again to see all your moves be played back for you.
