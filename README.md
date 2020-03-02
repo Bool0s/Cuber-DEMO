@@ -1,11 +1,15 @@
-Hey
+#Group Theory, Pianos, and Cubes
 
-Most of the work behind this isn't mine, go check the original source I forked off of to see the stuff for that.
-But what I did do was inspired by the ending of this video here: https://youtu.be/FW2Hvs5WaRY?t=240 .
-I tried my best to be as accurate as possible but unfortunately I couldn't get everything from the video.
 
-There's also some weird sound bugs that I'm not sure how to solve, mainly just that it doesn't seem to sync up correctly but idk how to fix that ¯\\\_(ツ)_/¯
+The inspiration for this project came from this clip: https://youtu.be/FW2Hvs5WaRY?t=240 
 
-**How to use**
 
-Just press record and start twisting the cube to hear the sounds. Press record again to see all your moves be played back for you.
+If you watch the whole video you will come to find that it joins the faces of a rubiks cubes to chords on a piano. The video explains the chord progression from discordance to harmony could be an audible representation of a group theory solution to a mixed Rubik's Cube. Upon hearing of this connection I wanted to ser (or hear) for myself what such a thing would sound like. So I implemented the necessary function to record and play, into Stewart Smith's implementation of a browser based Rubik's cube and created this.
+
+
+#How to use
+
+
+Open index.html and click "record" in the bottom left corner. Every twist you make will be played back to you. When record is deselected it will play all your moves in sequence, thus "playing" your solution (if you managed to solve the cube that is).
+
+Only one face will be played at a time, which can be selected via the dropdown menu.
