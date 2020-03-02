@@ -13,3 +13,5 @@ If you watch the whole video you will come to find that it joins the faces of a 
 Open index.html and click "record" in the bottom left corner. Every twist you make will be played back to you. When record is deselected it will play all your moves in sequence, thus "playing" your solution (if you managed to solve the cube that is).
 
 Only one face will be played at a time, which can be selected via the dropdown menu.
+
+Enjoy!
